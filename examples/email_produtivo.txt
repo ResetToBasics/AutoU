@@ -1,0 +1,14 @@
+Prezados,
+
+Preciso de ajuda urgente com um problema que estou enfrentando no sistema. Quando tento fazer login, recebo uma mensagem de erro dizendo "Credenciais inválidas", mesmo utilizando as mesmas credenciais que funcionavam anteriormente.
+
+Já tentei:
+- Limpar o cache do navegador
+- Verificar se as credenciais estão corretas
+- Tentar em outro navegador
+
+O problema começou ontem e está impedindo meu trabalho. Por favor, preciso de suporte técnico o quanto antes.
+
+Atenciosamente,
+João Silva
+
