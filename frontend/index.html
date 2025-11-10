@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Classificação de Emails</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="header-title">Sistema de Classificação de Emails</h1>
+            <p class="header-subtitle">Automatize a classificação e geração de respostas para emails corporativos</p>
+        </header>
+
+        <main class="main-content">
+            <div class="upload-section">
+                <div class="tabs">
+                    <button class="tab-button active" data-tab="text">Inserir Texto</button>
+                    <button class="tab-button" data-tab="file">Upload de Arquivo</button>
+                </div>
+
+                <div class="tab-content active" id="text-tab">
+                    <div class="input-group">
+                        <label for="email-text" class="label">Texto do Email</label>
+                        <textarea 
+                            id="email-text" 
+                            class="textarea" 
+                            rows="10" 
+                            placeholder="Cole ou digite o texto do email aqui..."
+                        ></textarea>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="file-tab">
+                    <div class="input-group">
+                        <label for="file-input" class="label">Selecionar Arquivo</label>
+                        <div class="file-upload-wrapper">
+                            <input 
+                                type="file" 
+                                id="file-input" 
+                                class="file-input" 
+                                accept=".txt,.pdf"
+                            >
+                            <label for="file-input" class="file-label">
+                                <span class="file-icon">📄</span>
+                                <span class="file-text">Clique para selecionar ou arraste o arquivo aqui</span>
+                                <span class="file-format">Formatos aceitos: .txt, .pdf</span>
+                            </label>
+                            <div class="file-name" id="file-name"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <button id="classify-button" class="button button-primary">
+                    <span class="button-text">Classificar Email</span>
+                    <span class="button-loader" id="button-loader"></span>
+                </button>
+            </div>
+
+            <div class="results-section" id="results-section" style="display: none;">
+                <div class="result-card">
+                    <div class="result-header">
+                        <h2 class="result-title">Resultado da Classificação</h2>
+                    </div>
+                    
+                    <div class="result-content">
+                        <div class="category-badge" id="category-badge">
+                            <span class="category-label">Categoria:</span>
+                            <span class="category-value" id="category-value"></span>
+                            <span class="confidence-badge" id="confidence-badge"></span>
+                        </div>
+
+                        <div class="confidence-bar">
+                            <div class="confidence-label">Confiança da Classificação</div>
+                            <div class="confidence-progress">
+                                <div class="confidence-fill" id="confidence-fill"></div>
+                            </div>
+                            <div class="confidence-percentage" id="confidence-percentage"></div>
+                        </div>
+
+                        <div class="response-section">
+                            <h3 class="response-title">Resposta Automática Sugerida</h3>
+                            <div class="response-box" id="response-box">
+                                <p class="response-text" id="response-text"></p>
+                            </div>
+                            <button class="button button-secondary" id="copy-button">
+                                Copiar Resposta
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="error-section" id="error-section" style="display: none;">
+                <div class="error-card">
+                    <div class="error-icon">⚠️</div>
+                    <div class="error-message" id="error-message"></div>
+                    <button class="button button-secondary" onclick="hideError()">Fechar</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p class="footer-text">Sistema de Classificação de Emails - Desenvolvido com Inteligência Artificial</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
+
