@@ -25,5 +25,5 @@ ENV FLASK_DEBUG=false
 ENV PYTHONUNBUFFERED=1
 
 # Comando para iniciar a aplicação
-CMD ["python", "run.py"]
+CMD ["./start.sh"]
 

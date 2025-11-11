@@ -34,8 +34,8 @@ logs/
 
 # Uploads
 uploads/
-*.pdf
-*.txt
+uploads/*.pdf
+examples/*.txt
 
 # Distribution
 dist/
